@@ -6,7 +6,6 @@ import { Outlet } from 'react-router-dom'
 const PortfolioLayout = () => {
     return (
         <div>
-            <Portfolio />
             <Outlet />
         </div>
     )

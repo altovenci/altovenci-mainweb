@@ -5,7 +5,6 @@ import { Outlet } from 'react-router-dom'
 const ServiceLayout = () => {
     return (
         <div>
-            <Service />
             <Outlet />
         </div>
     )

@@ -8,6 +8,8 @@ import RootLayout from './layouts/RootLayout'
 import ServiceLayout from './layouts/ServiceLayout'
 import BlogLayout from './layouts/BlogLayout'
 import NotFound from './pages/notFound'
+import PortfolioLayout from './layouts/PortfolioLayout'
+import Blog from './pages/blog'
 
 
 const App = () => {
@@ -15,10 +17,14 @@ const App = () => {
     <Route Path='/' element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path='service' element={<ServiceLayout />} >
+        <Route index element={<Service />} />
       </Route>
       <Route path='portfolio' element={<PortfolioLayout />} >
+        <Route index element={<Portfolio />} />
       </Route>
       <Route path='blog' element={<BlogLayout />}>
+        <Route index element={<Blog />} />
+        <Route index element={<Blog />} />
       </Route>
       <Route path='gallery' element={<Gallery />} />
       <Route path='*' element={<NotFound />} />

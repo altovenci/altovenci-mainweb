@@ -5,7 +5,6 @@ import { Outlet } from 'react-router-dom'
 const BlogLayout = () => {
     return (
         <>
-            <Blog />
             <div>
                 <Outlet />
             </div>
