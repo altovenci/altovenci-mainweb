@@ -1,1 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+
+@theme {
+    
+        --color-primary: #274029;
+        --color-secondary: #9ece9a;
+        --color-accent: #e4c5af;
+        --color-black: #181f1c;
+        --color-white: #f4f3ec;
+        --color-primary-900: #040604;
+        --color-primary-800: #080d08;
+        --color-primary-700: #0c130c;
+        --color-primary-600: #101a10;
+        --color-primary-500: #3d533e;
+        --color-primary-400: #526654;
+        --color-primary-300: #687969;
+        --color-primary-200: #7d8c7f;
+        --color-primary-100: #93a094;
+        --color-secondary-900: #10150f;
+        --color-secondary-800: #20291f;
+        --color-secondary-700: #2f3e2e;
+        --color-secondary-600: #3f523e;
+        --color-secondary-500: #4f674d;
+        --color-secondary-400: #bbddb8;
+        --color-secondary-300: #b1d8ae;
+        --color-secondary-200: #a8d3a4;
+        --color-secondary-100: #c5e2c2;
+        --color-accent-900: #171412;
+        --color-accent-800: #2e2723;
+        --color-accent-700: #443b35;
+        --color-accent-600: #5b4f46;
+        --color-accent-500: #726358;
+        --color-accent-400: #efdccf;
+        --color-accent-300: #ecd6c7;
+        --color-accent-200: #e9d1bf;
+        --color-accent-100: #e7cbb7;
+        --color-black-900: #020303;
+        --color-black-800: #050606;
+        --color-black-700: #070908;
+        --color-black-600: #0a0c0b;
+        --color-black-500: #0c100e;
+        --color-black-400: #747977;
+        --color-black-300: #5d6260;
+        --color-black-200: #464c49;
+        --color-black-100: #2f3533;
+        --font-heading: 'montserrat', system-ui;
+        --font-bridge: 'merriweather sans', system-ui;
+        --font-body: 'hind madurai', system-ui;
+        --font-size-h1: 4.209rem;
+        --font-size-h2: 3.157rem;
+        --font-size-h3: 2.369rem;
+        --font-size-h4: 1.777rem;
+        --font-size-h5: 1.333rem;
+        --font-size-body: 1rem;
+        --color-text-primary: var(--color-black-500);
+        --color-text-secondary: var(--color-black-100);
+        --color-bg-base: var(--color-secondary-100);
+        --color-bg-secondary: var(--color-secondary-200);
+        --color-border: var(--color-primary-500);
+    
+
+    ;
+}
+
+@media (prefers-color-scheme: dark) {
+    @theme {}
+}
+
+@layer base {
+
+    /* 1. Box sizing */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    /* 2. Remove default margin */
+    * {
+        margin: 0;
+    }
+
+    /* 3. Core body defaults */
+    body {
+        background-color: var(--color-bg-base);
+        min-height: 100vh;
+        line-height: 1.6;
+        color: var(--color-black-500);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* 4. Media elements */
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    /* 5. Form elements */
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    /* 6. Text wrapping */
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+    }
+
+    h1,
+    h2,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+        font-weight: 900;
+        line-height: 1.6;
+        font-tracking: -0.02em;
+    }
+
+    h3 {
+        font-family: var(--font-bridge);
+        font-weight: 800;
+        line-height: 1.6;
+        font-size: var(--font-size-h3);
+        font-tracking: -0.01em;
+
+    }
+
+    ;
+
+    p {
+        font-family: var(--font-body);
+        font-weight: 400;
+        line-height: 1.6;
+        font-size: var(--font-size-base);
+        font-heading: 1.6;
+    }
+
+    ;
+
+    /* 7. Root stacking context */
+    #root,
+    #__next {
+        isolation: isolate;
+    }
+}
